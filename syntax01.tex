@@ -1,0 +1,27 @@
+\documentclass[a4paper,english,ngerman,parskip=half-]{scrartcl}
+\usepackage{fontspec}
+\usepackage{microtype}
+\usepackage{libertine}
+\usepackage{babel}% Nur XeLaTeX und LuaLaTeX
+\setmainfont{LibertinusSerif}
+\usepackage{blindtext}
+\usepackage[automark]{scrlayer-scrpage}
+\title{Wissenschaftliche Arbeit in Lua\LaTeX}
+\subtitle{Schritt für Schritt - Anleitung}
+\author{Dr. Wolfgang Tischendorf}
+\date{\today}
+\begin{document}
+\maketitle
+\foreignlanguage{english}{%
+\begin{abstract}
+This is a short introduction into the professional typesetting system \TeX\ and Lua\TeX.
+\end{abstract}}
+\section{Grundeinstellungen}
+\subsection{Präambel}
+Das ist ein Text \marginpar{Text} in der Schriftart LibertinusSerif mit den Schnitten
+ \textit{Kursiv},
+ \textbf{\textit{Fett Kursiv}} und
+ \textsc{Kapitälchen}. 
+\section{Blindtext}
+\blinddocument
+ \end{document}
