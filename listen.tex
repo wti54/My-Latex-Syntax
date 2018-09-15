@@ -1,0 +1,59 @@
+\chapter{Listen}
+\section{Die Listenarten}
+Es gibt eine Vielzahl von Paketen für die Unterstützung von Listen. Ich verwende lediglich das Pakte \verb*+enumitem+.
+
+Es gibt drei unterschiedliche Arten von Listen, die als Standard in allen Dokumentklassen zur Verfügung stehen:
+\begin{itemize}
+	\item \verb*+itemize+ für Markierungslisten
+	\item \verb*+enumerate+ für Aufzählungslisten
+	\item \verb*+description+ für Schlagwortlisten	
+\end{itemize}
+
+Ein Beispiel für eine \emph{Markierungsliste} ist oben zu sehen. Die Verschachtelung wird bis in die vierte Ebene durchgeführt und jeweils mit einem anderen Symbol gekennzeichnet:
+\begin{itemize}
+	\item Erste Ebene
+	\begin{itemize}
+		\item Zweite Ebene
+		\begin{itemize}
+			\item Dritte Ebene
+			\begin{itemize}
+				\item Vierte Ebene
+				\item Nochmals vierte Ebene
+			\end{itemize}
+			\item Immer noch dritte Ebene
+		\end{itemize}
+		\item Immer noch zweite Ebene
+	\end{itemize}
+	\item Immer noch erste Ebene
+\end{itemize}
+
+Die Symbole lassen sich durch \verb*+\renewcommand+ beliebig definieren\footnote{Anleitung dazu bei Voss, Wissenschaftliche Arbeit S. 130}.
+
+Die \emph{Aufzählungsliste} funktioniert wie die Markierungsliste, nur mit dem Befehl \verb+enumerate+
+\begin{enumerate}
+	\item Erste Ebene
+	\begin{enumerate}
+		\item Zweite Ebene
+		\begin{enumerate}
+			\item Dritte Ebene
+			\begin{enumerate}
+				\item Vierte Ebene
+				\item Nochmals vierte Ebene
+			\end{enumerate}
+			\item Immer noch dritte Ebene
+		\end{enumerate}
+		\item Immer noch zweite Ebene
+	\end{enumerate}
+	\item Immer noch erste Ebene
+\end{enumerate}
+Auch hier können Änderungen vorgenommen werden\footnote{Voss. S. 132 f.}.
+
+Bei der \emph{Schlagwortliste} muss ein optionales Element verwendet werden, das standardmäßig fett gedruckt wird.
+\begin{description}
+	\item[AT] Altes Testament
+	\item[NT] Neues Testament
+\end{description}
+Bei Verschachtelungen, die ebenfalls möglich sind, muss bedacht werden, dass nach jedem \verb*+\item+ ein Zeichen folgen muss, damit die nächste Ebene mit einer neuen Zeile begonnen wird (z. B. die Tilde). Ein Sonderfall der Schlagwortlioste ist die \emph{Labeling-Liste}\footnote{Weiteres siehe bei Voss. S. 133}.
+
+\section{Das Paket enumitem}
+

@@ -1,15 +1,38 @@
 \documentclass[a4paper,english,ngerman,parskip=half-]{scrartcl}
 \usepackage{fontspec}
+\usepackage[autostyle]{csquotes}
+\usepackage{hyperref}
 \usepackage{microtype}
 \usepackage{libertine}
 \usepackage{babel}% Nur XeLaTeX und LuaLaTeX
 \setmainfont{LibertinusSerif}
+
+%-------------------------Bibelprogramm
+\usepackage{bibleref-german}
+\biblerefstyle{TRE}%RGG \bibleverse{Rev}(13:15-17)
+\usepackage[comma=chvsep]{bibleref-parse}%\pibibleverse{}
+\newcommand{\bibleat}[1]{\href{http://www.bibelwissenschaft.de/bibelstelle/#1/BHS}{\pbibleverse{#1}}}
+\newcommand{\bible}[1]{\href{http://www.bibelwissenschaft.de/bibelstelle/#1/LU}{\pbibleverse{#1}}}
+\newcommand{\biblena}[1]{\href{http://www.bibelwissenschaft.de/bibelstelle/#1/NA}{\pbibleverse{#1}}}
+\newcommand{\biblelxx}[1]{\href{http://www.bibelwissenschaft.de/bibelstelle/#1/LXX}{\pbibleverse{#1}}}
 \usepackage{blindtext}
 \usepackage[automark]{scrlayer-scrpage}
+
+\newcommand{\RL}[1]{\bgroup\luatextextdir TRT#1\egroup}
+\newcommand{\LR}[1]{\bgroup\luatextextdir TLT#1\egroup}
+\newenvironment{RTL}{\luatextextdir TRT\luatexpardir TRT\luatexbodydir TRT}{}
+\newenvironment{LTR}{\luatextextdir TLT\luatexpardir TLT\luatexbodydir TLT}{}
+
 \title{Wissenschaftliche Arbeit in Lua\LaTeX}
 \subtitle{Schritt für Schritt - Anleitung}
 \author{Dr. Wolfgang Tischendorf}
 \date{\today}
+\newfontfamily\hebrewfont[Script=Hebrew]{Linux Libertine}
+%\newcommand\setArabic{
+%	\luatexpagedir TRT
+%	\luatexbodydir TRT
+%	\luatexpardir TRT
+%	\luatextextdir TRT}
 \begin{document}
 \maketitle
 \foreignlanguage{english}{%
@@ -22,6 +45,17 @@ Das ist ein Text \marginpar{Text} in der Schriftart LibertinusSerif mit den Schn
  \textit{Kursiv},
  \textbf{\textit{Fett Kursiv}} und
  \textsc{Kapitälchen}. 
+ \section{Bibeltexte}
+Hier eine Bibelstelle \bibleat{Gen1,1-10}.
+ Hier eine Bibelstelle \bible{Gen1,1-10}.
+ Hier eine Bibelstelle \biblena{Röm 1,1-10}.
+ Hier eine Bibelstelle \biblelxx{Gen1,1-10}.
+ \section{Altsprachen}
+ Hier kopiert: \\
+ \RL 
+11בְּרֵאשִׁ֖ית בָּרָ֣א אֱלֹהִ֑ים אֵ֥ת הַשָּׁמַ֖יִם וְאֵ֥ת הָאָֽרֶץ׃ 2וְהָאָ֗רֶץ הָיְתָ֥ה תֹ֨הוּ֙ וָבֹ֔הוּ וְחֹ֖שֶׁךְ עַל־פְּנֵ֣י תְהֹ֑ום וְר֣וּחַ אֱלֹהִ֔ים מְרַחֶ֖פֶת עַל־פְּנֵ֥י הַמָּֽיִם׃ 3וַיֹּ֥אמֶר אֱלֹהִ֖ים יְהִ֣י אֹ֑ור וַֽיְהִי־אֹֽור׃ 4וַיַּ֧רְא אֱלֹהִ֛ים אֶת־הָאֹ֖ור כִּי־טֹ֑וב וַיַּבְדֵּ֣ל אֱלֹהִ֔ים בֵּ֥ין הָאֹ֖ור וּבֵ֥ין Gen 1,1 (LXX): ᾿Εν ἀρχῇ ἐποίησεν ὁ θεὸς τὸν οὐρανὸν καὶ τὴν γῆν.
+ 
+ Mt 1,1 (NA28): Βίβλος γενέσεως Ἰησοῦ Χριστοῦ υἱοῦ Δαυὶδ υἱοῦ Ἀβραάμ.
 \section{Blindtext}
 \blinddocument
  \end{document}

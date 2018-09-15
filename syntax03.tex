@@ -1,0 +1,56 @@
+% !TeX document-id = {f5a3dece-babf-40bb-a347-7292db9c36ce}
+%!TEX TS-program=xetex
+%!TEX encoding = UTF-8 Unicode
+% Musterdokument für Griechisch, Hebräisch und Latein einschließlich Bibelstellen, die in PDF aufgerufen werden können
+
+\documentclass[a4paper,landscape,12pt,hebrew,ngerman,greek,latin]{article}%{scrreprt}
+\usepackage[left=1cm,right=1cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[autostyle]{csquotes}
+\usepackage{hyperref}
+\usepackage{fontspec}
+%\usepackage{xunicode}
+\usepackage{polyglossia}
+\setmainlanguage[spelling=new,babelshorthands=true]{german}
+%\usepackage[no-sscript]{xltxtra}%
+%\usepackage{bidi}
+%\setmainlanguage[spelling=new,babelshorthands=true]{german}
+%\TeXXeTstate=1
+	\usepackage{bibleref-german}
+	\biblerefstyle{TRE}%RGG \bibleverse{Rev}(13:15-17)
+	\usepackage[comma=chvsep]{bibleref-parse}%\pibibleverse{}
+	\newcommand{\bible}[1]{\href{http://www.bibelwissenschaft.de/bibelstelle/#1/LU}		{\pbibleverse{#1}}}
+	\newcommand{\biblena}[1]{\href{http://www.bibelwissenschaft.de/bibelstelle/#1/NA}{\pbibleverse{#1}}}
+	\newcommand{\biblelxx}[1]{\href{http://www.bibelwissenschaft.de/bibelstelle/#1/LXX}{\pbibleverse{#1}}}
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Linux Libertine}
+\setmonofont[Scale=MatchLowercase]{Myriad Pro}
+\newfontfamily\hebrewfont[Script=Hebrew]{SBL Hebrew}
+\newfontfamily\greekfont[Script=Greek]{SBL Greek}
+\newfontfamily\latinfont[Script=Latin,Scale=0.9]{Myriad Pro}
+\setotherlanguage[variant=ancient]{greek}
+\setotherlanguage{hebrew}
+\setotherlanguage{latin}
+\newcommand{\heb}[1]{\texthebrew{#1}}
+\newcommand{\gre}[1]{\textgreek[variant=ancient]{#1}}
+\newcommand{\lat}[1]{\textlatin{#1}}
+
+\begin{document}
+Datei: xetex-muster-heb-greek.tex
+\section*{Erster Versuch}
+Das ist \enquote{erster Text.}
+Das ist auch «erster Text».
+Auch das ist »erster Text«
+\section*{Sonderzeichen}
+ \=a und \^a und \.a und \d{a} und \d{h}\\
+ā und â und ȧ und ạ und ḥ
+\section*{Bibeltexte}
+Hier eine Bibelstelle \bible{Gen1,1-10}.
+Hier eine Bibelstelle \biblena{Röm 1,1-10}.
+Hier eine Bibelstelle \biblelxx{Gen1,1-10}.
+\section*{Schriften}
+Hebräisch: \heb{בְּרֵאשִׁ֖ית בָּרָ֣א אֱלֹהִ֑ים אֵ֥ת הַשָּׁמַ֖יִם וְאֵ֥ת הָאָֽרֶץ׃}\\
+Griechisch: \gre{Εν ἀρχῇ ἐποίησεν ὁ θεὸς τὸν οὐρανὸν καὶ τὴν γῆν}\\
+Latein: \lat{In principio creavit Deus caelum et terram.} \\
+Hier wieder der normale Text.
+
+\end{document}

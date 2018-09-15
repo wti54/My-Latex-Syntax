@@ -1,0 +1,64 @@
+%!TEX TS-program = xetex
+%!TEX encoding = UTF-8 Unicode
+%---------------Definition
+\documentclass{report}
+%\documentclass[12pt,a4paper]{report} 
+%ohne Koma-Script
+%----------------Pakete:
+\usepackage{xunicode} %soll vorhanden sein für XeTeX
+\usepackage{fontspec} %soll vorhanden sein für XeTeX
+\usepackage{xltxtra} %soll vorhanden sein für XeTeX
+\usepackage{url}%für XeTeX Umbrechen langer URLs
+\usepackage{ngerman}%deutsche Sprachgewohnheiten
+\usepackage{multicol}%mit \begin und \end Teilbereiche mehrspaltig
+\usepackage{graphicx}%Unterstützung von JPG,PNG,PDF-Grafiken
+\usepackage{wrapfig}%umflossene Grafiken
+%\usepackage{verbatim}
+\usepackage{picinpar}
+\usepackage[german]{varioref}%erweiterte Referenzen
+%\usepackage[wide]{sidecap}%seitliche Beschriftung von Bildern/Tabellen
+\usepackage{ccaption}%Anpassung von Abbildungsbezeichnungen
+%\usepackage{capt-of}
+\usepackage[colorlinks , linkcolor=blue]{hyperref}%Verweise als Links in PDF
+\usepackage{listings}
+%\usepackage{ragged2e}
+%\let\raggesright\RaggedRight
+%\usepackage[newcommands , newparameters]{ragged2e}%bessere Zeilenumbrüche
+
+%---------------Schriften
+%\defaultfontfeatures{scale=MatchLowercase} %alle Fonts auf x-Höhe =>Harmonisierung
+\setmainfont[Mapping=tex-text]{Linux Libertine}
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+%\setromanfont[Mapping=tex-text , RawFeature=+opbd]{Linux Libertine}
+%\setromanfont[Mapping=tex-text]{Linux Biolinum}
+\setsansfont[Mapping=tex-text]{Myriad Pro} %ist serifenlose Schrift
+%\setsansfont[Mapping=tex-text]{Linux Biolinum}
+\setmonofont[Mapping=tex-text]{Courier New}
+
+%-------------Formatierungen
+
+
+
+
+\begin{document}
+\section{Allgemein}
+Das ist ein Versuch. \\
+Hier mit \glqq Anführungszeichen\grqq\\
+Das sind »Anführungszeichen« \\
+
+ein griechischer Versuch: ;ςερτυθσδφγ φἄ ἂ ἀἁ\\
+
+ein hebräischer Versuch: לערֶשׂהּ;=:\\ 
+בְּרֵאשִׁ֖ית בָּרָ֣א אֱלֹהִ֑ים אֵ֥ת הַשָּׁמַ֖יִם וְאֵ֥ת הָאָֽרֶץ׃
+
+wieder deutsch
+jetzt Akzente mit Symbol: Ṭ ị ṃ ė ë ṭ Ḥ ḥ
+
+\section{Schriftbilder}
+Dieses ist ein erster Probetext in verschiedenen Schriften. Hier Libertine//
+\begin{verbatim}
+Dieses ist ein erster Probetext in verschiedenen Schriften. Hier Serifenlos
+\end{verbatim} 
+dieses ist ein erster Probetext in verschiedenen Schriften. Hier Quelltext
+
+\end{document}

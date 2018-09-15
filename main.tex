@@ -1,8 +1,28 @@
+%%%main-Datei einer LaTeX-Übersicht
+%%% simuliert eine wissenschaftliche Arbeit
+%%% alle wichtigen Elemente werden aufgelistet und ausprobiert
+%%% compiliert wird mit LuaLaTeX
+%%% begonnen am 3. September 2018
+%%% Dr. Wolfgang Tischendorf
 \documentclass[a4paper,english,ngerman,parskip=half-]{scrreprt}
 	\input{preamble}%hier ist kein \include möglich
 \begin{document}
 \maketitle
 \include{abstract}
 \include{vorwort}
-
+\include{allgemeines}
+\include{latexdokument}
+\include{schriften}
+\include{textelemente}
+\include{gliederung}
+\include{listen}
+\include{tabellen}
+\include{abbildungen}
+\include{gleitumgebung}
+\include{verzeichnisse}
+\include{bibliographie}
+\include{graphiken}
+\include{mathe}
+\include{sonstiges}
+\include{anhang}
 \end{document}
