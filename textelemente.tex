@@ -15,8 +15,11 @@ Frame oder fbox
 \section{Textmarken und -referenzen}
 \section{Hyperlinks}
 \subsection{Allgemeines}
-Das Paket \verb*+hyperref+ stammt von Sebastian Rahtz und Heiko Oberdiek. Es klinkt sich in sämtliche Referenzen, Links, Fußnoten usw. ein.
-\subsection{Optionen}
+Das Paket \verb*+hyperref+ stammt von Sebastian Rahtz und Heiko Oberdiek. Es klinkt sich in sämtliche Referenzen, Links, Fußnoten usw. ein. \verb*+hyperref+ soll als letztes aller Pakete geladen werden. Allerdings gibt es eine Fehlermeldung, wenn das Paket \verb*+cleveref+ zuvor geladen wird. Die internen Links werden umrahmt dargestellt. Sie werden allerdings nicht ausgedruckt. Mit der Option \verb*+linkcolor=+ kann die Textfarbe eingestellt werden. Dabei verschwinden die Rahmen. Mit dem Makro \verb*+\url{URL}+ geschriebene Links werden automatisch umgebrochen. Beispiel URL: \url{http://www.dante.de}.
+\subsection{Lesezeichen - Bookmarks}
+Normalerweise werden Lesezeichen automatisch von \verb*+hyperref+ verwaltet. Man kann allerdings auch manuell eingreifen.
+\subsection{Sonstiges}
+Betrifft Anker, Farben und Links auf Gleitumgebungen.
 \section{Textumbruch}
 \section{Horizontale und vertikale Abstände}
 \section{Mehrspaltiger Text}
